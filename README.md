@@ -1,5 +1,23 @@
 # UsefulJs
 
+### What is it?
+
+I started this project as a way to save blocks of code that I find myself looking for regularly, or interesting code that I don't want to forget. It serves as a place to keep any useful code that I am likely to want to reuse in future projects. The fact it is online means anyone can access it.
+
+### How does it work?
+
+Hosting, authentication and database are taken care of by Firebase. Admin users (myself) can add new code through an Angular Reactive Form. The code block is copied and pasted from a text editor, and is formatted by #prismjs to be as accessible and reusable as possible for users.
+
+### Limitations
+
+The code blocks aren't tested, and they tend to be copied and pasted from specific projects. As such, they are not simply copy and paste solutions, but more that the user will have to figure out how to tweat the code to suit their own needs.
+
+### What's next?
+
+- search filters
+- potential use cases
+- More code!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
 ## Development server
