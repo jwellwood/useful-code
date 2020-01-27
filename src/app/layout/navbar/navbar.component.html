@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar" color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button aria-label="title icon link to home" routerLink="/">
+      <fa-icon size="3x" [icon]="js"></fa-icon>
+    </button>
+
+    <span class="navbar-space"> </span>
+    <button *ngIf="!isAuth" mat-icon-button [routerLink]="['/login']">
+      <mat-icon>person</mat-icon>
+    </button>
+    <div *ngIf="isAuth">
+      <span class="email-display paragraph">{{ authUser }}</span>
+      <button mat-icon-button (click)="onLogout()">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

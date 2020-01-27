@@ -1,0 +1,14 @@
+@import "./variables";
+
+@mixin input-style {
+  width: 100%;
+  font-family: $body-font;
+  font-weight: bold;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

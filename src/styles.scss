@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./scss/variables";
+@import "./scss/mixins";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $body-font;
+}
+
+.primary {
+  color: $primary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+// .form-container {
+//   margin: auto;
+//   padding: 5px;
+//   width: auto;
+// }
+
+// .icon {
+//   margin: 3px;
+// }
+
+.login {
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  font-family: $title-font;
+  color: $primary;
+}
+
+.paragraph {
+  font-family: $body-font;
+}
+
+.input {
+  // max-width: 250px;
+  // margin: 10px 0px;
+  @include input-style;
+}
+
+.input-textarea {
+  // margin: 10px auto;
+  @include input-style;
+}
+
+.login-form {
+  margin: auto;
+}
+
+.form-block {
+  @include flex-col;
+}

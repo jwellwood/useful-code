@@ -1,0 +1,87 @@
+<app-back-button [linkTo]="id ? '/codes/' + id : '/'"></app-back-button>
+<mat-card>
+  <h3 class="heading">Add new code</h3>
+  <form
+    [formGroup]="addCodeForm"
+    (ngSubmit)="isUpdate ? onUpdate(addCodeForm) : onSubmit(addCodeForm)"
+  >
+    <!-- ************************************* NAME ****************************************
+    ***************************************************************************** -->
+    <div class="form-block form-container">
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Give the code block a name"
+          [formControl]="name"
+          [errorStateMatcher]="matcher"
+          required
+          maxlength="50"
+        />
+        <mat-error *ngIf="name.hasError('name')">
+          Error
+        </mat-error>
+      </mat-form-field>
+      <!-- ************************************* TYPE ****************************************
+    ***************************************************************************** -->
+      <mat-form-field appearance="outline" class="input">
+        <mat-label>Type</mat-label>
+        <mat-select
+          matSelect
+          placeholder="Type"
+          [formControl]="type"
+          [errorStateMatcher]="matcher"
+          required
+        >
+          <mat-option value="number">Number</mat-option>
+          <mat-option value="string">String</mat-option>
+          <mat-option value="firebase">Firebase</mat-option>
+          <mat-option value="angular">Angular</mat-option>
+          <mat-option value="other">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- ************************************* DESCRIPTION ****************************************
+    ***************************************************************************** -->
+      <mat-form-field appearance="outline" class="input-textarea">
+        <mat-label>Description</mat-label>
+
+        <textarea
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="3"
+          matInput
+          placeholder="What does the code do?"
+          [formControl]="desc"
+          [errorStateMatcher]="matcher"
+          required
+          maxlength="200"
+        ></textarea>
+        <mat-error *ngIf="desc.hasError('desc')">
+          Error
+        </mat-error>
+      </mat-form-field>
+      <!-- ************************************* CODE BLOCK ****************************************
+    ***************************************************************************** -->
+      <mat-form-field appearance="outline" class="input-textarea">
+        <mat-label>Code</mat-label>
+        <textarea
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="15"
+          matInput
+          placeholder="Copy and paste your code from a text editor here."
+          [formControl]="codeBlock"
+          required
+          maxlength="5000"
+        ></textarea>
+        <mat-hint class="paragraph"
+          >It will be automatically formatted. <i>Include comments</i></mat-hint
+        >
+        <mat-error *ngIf="codeBlock.hasError('codeBlock')">
+          Error
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <app-submit-button [isUpdate]="isUpdate"></app-submit-button>
+  </form>
+</mat-card>
