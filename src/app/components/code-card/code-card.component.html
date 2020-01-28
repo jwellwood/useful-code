@@ -1,22 +1,22 @@
 <app-back-button [linkTo]="'/'"></app-back-button>
 <app-spinner *ngIf="!code"></app-spinner>
 <mat-card *ngIf="code">
-  <div class="card-header">
-    <h3 class="heading">{{ code.name }}</h3>
+  <header class="card-header">
+    <app-header [text]="code.name"></app-header>
     <div>
-      <h5 class="paragraph accent">
+      <p class="paragraph accent">
         {{ code.type }} <app-list-icon [type]="code.type"></app-list-icon>
-      </h5>
+      </p>
     </div>
-  </div>
-  <p class="paragraph">{{ code.desc }}</p>
+  </header>
+  <section class="paragraph">{{ code.desc }}</section>
   <app-code-block [codeBlock]="code.codeBlock"> </app-code-block>
-  <div *ngIf="isAuth" class="edit-buttons">
+  <section *ngIf="isAuth" class="edit-buttons">
     <button mat-button color="accent" routerLink="/codes/{{ code.id }}/edit">
       Edit
     </button>
     <button mat-button color="warn" (click)="onDelete(code)">
       Delete
     </button>
-  </div>
+  </section>
 </mat-card>

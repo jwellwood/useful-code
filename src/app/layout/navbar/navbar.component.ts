@@ -11,7 +11,7 @@ import { faJs } from "@fortawesome/free-brands-svg-icons";
 export class NavbarComponent implements OnInit {
   isAuth: boolean;
   authUser: string;
-  js = faJs;
+  js = faJs; // Icon
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+    this.isAuth = false;
     this.router.navigate(["/"]);
   }
 }

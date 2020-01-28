@@ -11,6 +11,8 @@ body {
   font-family: $body-font;
 }
 
+// The majority of styles are controlled from here throughout the app, simply for ease of access during development
+
 .primary {
   color: $primary;
 }
@@ -28,29 +30,23 @@ body {
 }
 
 .center {
-  text-align: center;
-  margin: auto;
+  @include centerX;
 }
-
-// .form-container {
-//   margin: auto;
-//   padding: 5px;
-//   width: auto;
-// }
-
-// .icon {
-//   margin: 3px;
-// }
 
 .login {
   max-width: 350px;
-  margin: auto;
-  text-align: center;
+  @include centerX;
+}
+
+.login-form {
+  @include centerX;
+  //  margin: auto;
 }
 
 .heading {
   font-family: $title-font;
   color: $primary;
+  font-size: 1.5rem;
 }
 
 .paragraph {
@@ -58,18 +54,11 @@ body {
 }
 
 .input {
-  // max-width: 250px;
-  // margin: 10px 0px;
   @include input-style;
 }
 
 .input-textarea {
-  // margin: 10px auto;
   @include input-style;
-}
-
-.login-form {
-  margin: auto;
 }
 
 .form-block {
