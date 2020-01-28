@@ -37,6 +37,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { CardHeaderIconComponent } from './utils/icons/card-header-icon/card-header-icon.component';
 import { NotFoundComponent } from './utils/not-found/not-found.component';
+import { HeaderComponent } from './utils/header/header.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NotFoundComponent } from './utils/not-found/not-found.component';
     LoginComponent,
     ListIconComponent,
     CardHeaderIconComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

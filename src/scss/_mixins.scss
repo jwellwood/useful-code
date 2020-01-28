@@ -12,3 +12,8 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+@mixin centerX {
+  margin: auto;
+  text-align: center;
+}

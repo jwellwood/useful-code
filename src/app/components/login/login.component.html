@@ -1,9 +1,9 @@
 <mat-card class="login">
-  <h3 class="heading">Login</h3>
+  <app-header [text]="'Login'"></app-header>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
-    <div>
+    <section>
       <div class="form-block form-container">
-        <mat-form-field class="input">
+        <mat-form-field class="input" aria-label="Email">
           <input
             matInput
             type="email"
@@ -12,7 +12,7 @@
             required
           />
         </mat-form-field>
-        <mat-form-field class="input">
+        <mat-form-field class="input" aria-label="Password">
           <input
             matInput
             type="password"
@@ -31,6 +31,6 @@
       >
         Sign in
       </button>
-    </div>
+    </section>
   </form>
 </mat-card>

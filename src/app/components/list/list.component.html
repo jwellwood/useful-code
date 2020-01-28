@@ -1,12 +1,16 @@
 <app-spinner *ngIf="!codes"></app-spinner>
 <app-add-button *ngIf="isAuth"></app-add-button>
-<mat-list>
-  <div *ngFor="let code of codes">
-    <mat-list-item routerLink="/codes/{{ code.id }}" class="pointer list-item">
+<mat-nav-list>
+  <section *ngFor="let code of codes">
+    <a
+      mat-list-item
+      routerLink="/codes/{{ code.id }}"
+      class="pointer list-item"
+    >
       <app-list-icon mat-list-icon [type]="code.type"></app-list-icon>
-      <h4 mat-line class="heading primary">{{ code.name }}</h4>
+      <div mat-line class="heading primary">{{ code.name }}</div>
       <p class="paragraph" mat-line>{{ code.desc }}</p>
-    </mat-list-item>
+    </a>
     <mat-divider></mat-divider>
-  </div>
-</mat-list>
+  </section>
+</mat-nav-list>
