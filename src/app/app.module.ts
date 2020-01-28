@@ -14,7 +14,6 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavbarComponent } from "./layout/navbar/navbar.component";
 import { ListComponent } from "./components/list/list.component";
-import { PageContainerComponent } from "./layout/page-container/page-container.component";
 import { CodeCardComponent } from "./components/code-card/code-card.component";
 import { BackButtonComponent } from "./utils/buttons/back-button/back-button.component";
 import { AddButtonComponent } from "./utils/buttons/add-button/add-button.component";
@@ -35,16 +34,16 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-import { CardHeaderIconComponent } from './utils/icons/card-header-icon/card-header-icon.component';
-import { NotFoundComponent } from './utils/not-found/not-found.component';
-import { HeaderComponent } from './utils/header/header.component';
+import { CardHeaderIconComponent } from "./utils/icons/card-header-icon/card-header-icon.component";
+import { NotFoundComponent } from "./utils/not-found/not-found.component";
+import { HeaderComponent } from "./utils/header/header.component";
+import { FooterComponent } from "./layout/footer/footer.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ListComponent,
-    PageContainerComponent,
     CodeCardComponent,
     BackButtonComponent,
     AddButtonComponent,
@@ -56,7 +55,8 @@ import { HeaderComponent } from './utils/header/header.component';
     ListIconComponent,
     CardHeaderIconComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

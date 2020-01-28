@@ -6,13 +6,35 @@ html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: $body-font;
 }
 
+#page-container {
+  min-height: 100vh;
+}
+#main {
+  overflow: auto;
+  padding-bottom: 40px;
+  padding: 15px;
+  height: 100%;
+}
+#footer {
+  border-top: 4px solid $primary;
+  height: 40px;
+  background-color: #eee;
+  color: $accent;
+  margin-top: -40px;
+  padding: 10px;
+  @include centerX;
+  clear: both;
+}
+
 // The majority of styles are controlled from here throughout the app, simply for ease of access during development
 
+// Colors
 .primary {
   color: $primary;
 }
@@ -21,28 +43,7 @@ body {
   color: $accent;
 }
 
-.page-container {
-  padding: 20px;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.center {
-  @include centerX;
-}
-
-.login {
-  max-width: 350px;
-  @include centerX;
-}
-
-.login-form {
-  @include centerX;
-  //  margin: auto;
-}
-
+// Typography
 .heading {
   font-family: $title-font;
   color: $primary;
@@ -51,6 +52,27 @@ body {
 
 .paragraph {
   font-family: $body-font;
+}
+
+// Flex spacing
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  @include centerX;
+}
+
+// Specifics
+.login {
+  max-width: 350px;
+  @include centerX;
+}
+
+.login-form {
+  @include centerX;
 }
 
 .input {
@@ -63,4 +85,10 @@ body {
 
 .form-block {
   @include flex-col;
+}
+
+// Other
+
+.pointer {
+  cursor: pointer;
 }
