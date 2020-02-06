@@ -10,7 +10,7 @@ Hosting, authentication and database are taken care of by Firebase. Admin users 
 
 ### Limitations
 
-The code blocks aren't tested, and they tend to be copied and pasted from specific projects. As such, they are not simply copy and paste solutions, but more that the user will have to figure out how to tweat the code to suit their own needs.
+The code blocks aren't tested, and they tend to be copied and pasted from specific projects. As such, they are not simply copy and paste solutions, but more that the user will have to figure out how to tweak the code to suit their own needs.
 
 ### What's next?
 
